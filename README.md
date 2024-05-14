@@ -10,9 +10,11 @@ The script streamlines the deployment process, ensuring a hassle-free experience
 **Error-Free Execution:** 
 With careful design and testing, the script minimizes the occurrence of errors during deployment.
 
-**ZTP Provisioning:** Enjoy the convenience of almost 100% Zero Touch Provisioning, reducing manual intervention.
+**ZTP Provisioning:**
+Enjoy the convenience of almost 100% Zero Touch Provisioning, reducing manual intervention.
 
-**Efficient Installation:** The approximate installation time ranges between 10 to 15 minutes, enabling swift setup of the validator node server.
+**Efficient Installation:**
+The approximate installation time ranges between 10 to 15 minutes, enabling swift setup of the validator node server.
 ```
 
 **System Requirements**
