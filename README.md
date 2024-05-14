@@ -4,15 +4,15 @@ Welcome to the OraiChain Validator Node Deployment Script repository! The primar
 
 **Key Features:**
 
-Seamless Deployment: 
+**Seamless Deployment:**
 The script streamlines the deployment process, ensuring a hassle-free experience.
 
-Error-Free Execution: 
+**Error-Free Execution:** 
 With careful design and testing, the script minimizes the occurrence of errors during deployment.
 
-ZTP Provisioning: Enjoy the convenience of almost 100% Zero Touch Provisioning, reducing manual intervention.
+**ZTP Provisioning:** Enjoy the convenience of almost 100% Zero Touch Provisioning, reducing manual intervention.
 
-Efficient Installation: The approximate installation time ranges between 10 to 15 minutes, enabling swift setup of the validator node server.
+**Efficient Installation:** The approximate installation time ranges between 10 to 15 minutes, enabling swift setup of the validator node server.
 
 
 **System Requirements**
@@ -45,38 +45,38 @@ Ensure that the systemd service is set up and enabled for proper functionality.
 
 The deployment script automates the setup process for deploying an OraiChain Validator node. Below is a detailed breakdown of its functionality:
 
-Set System File Limit: 
+**Set System File Limit:** 
 Adjusts the system file limit to 65535, optimizing performance for the validator node.
 
-Configure and Install UFW: 
+**Configure and Install UFW:** 
 Configures and installs the Uncomplicated Firewall (UFW) if not already installed, enhancing server security.
 
-Install Essential Packages:
+**Install Essential Packages:**
 Installs essential packages including build-essential, git, make, gcc, wget, liblz4-tool, Go, and libwasmvm, ensuring all necessary dependencies are met.
 
-Set Go Path: 
+**Set Go Path:** 
 Sets the Go binary path to the system PATH, enabling seamless execution of Go commands.
 
-Install Orai Binary from Source: 
+**Install Orai Binary from Source:** 
 Fetches and installs the latest Orai binary from the source, ensuring the latest version is deployed.
 
-Install Latest Snapshot: 
+**Install Latest Snapshot:** 
 Downloads and installs the latest blockchain snapshot, reducing synchronization time for the validator node.
 
-Setup oraid.service Daemon: 
+**Setup oraid.service Daemon:** 
 Configures the oraid.service daemon, enabling automatic startup and management of the validator node as a service.
 
-Configuration Customization:
+**Configuration Customization:**
 Sets minimum gas price, pruning settings in the app.toml configuration file.
 Configures seed nodes in the config.toml file, optimizing network connectivity.
 
-Automatic Node Activation: 
+**Automatic Node Activation:** 
 Initiates the validator node automatically upon completion of the installation process, ensuring immediate functionality.
 
 **Usage:**
 To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts.
 
-Getting Started:
+**Getting Started:**
 To get started with deploying your OraiChain Validator node using this script, follow these simple steps:
 
 Installation Instructions:
@@ -90,12 +90,10 @@ Installation Instructions:
    ```
    sudo chmod +x disk-space-script.sh
    ```
-
 3. **Permissions:** Set executable permissions for the `setup_HOME-orai.sh` file to install "oraid" in $HOME/.oraid environment:
    ```
    sudo chmod +x check_disk_script.sh
    ```
-
 4. **$HOME/orai/orai/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
    ./setup_orai-orai.sh
