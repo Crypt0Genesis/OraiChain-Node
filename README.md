@@ -112,7 +112,7 @@ Installation Instructions:
    ```
    Or
    
-   **D$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
+   **$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
    ./setup_HOME-orai.sh
    ```
