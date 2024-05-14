@@ -2,7 +2,7 @@
 
 Welcome to the OraiChain Validator Node Deployment Script repository! The primary objective of this script is to facilitate seamless and error-free deployment of the OraiChain Validator node. This script offers a significant advantage by enabling almost 100% Zero Touch Provisioning (ZTP) of the validator node server.
 
-Key Features:
+**Key Features:**
 
 Seamless Deployment: 
 The script streamlines the deployment process, ensuring a hassle-free experience.
@@ -41,7 +41,7 @@ Ensure that the systemd service is set up and enabled for proper functionality.
 **Note: Kindly be aware that the validator setup utilizes the oraid binary built from source in a non-Docker environment.**
 
 
-Script Functionality Overview:
+**Script Functionality Overview:**
 
 The deployment script automates the setup process for deploying an OraiChain Validator node. Below is a detailed breakdown of its functionality:
 
@@ -73,7 +73,7 @@ Configures seed nodes in the config.toml file, optimizing network connectivity.
 Automatic Node Activation: 
 Initiates the validator node automatically upon completion of the installation process, ensuring immediate functionality.
 
-Usage:
+**Usage:**
 To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts.
 
 Getting Started:
@@ -84,117 +84,27 @@ Installation Instructions:
 1. **Download the Files:** Retrieve the necessary files onto your server.
    ```
    cd $HOME
-   sudo git clone https://github.com/Crypt0Genesis/diskchecker_orai-orai-oraid.git
+   sudo git clone https://github.com/Crypt0Genesis/OraiChain-Node.git
    ```
-2. **Permissions:** Set executable permissions for the `disk-space-script.sh` file using:
+2. **Permissions:** Set executable permissions for the `setup_orai-orai.sh` file to install "oraid" in $HOME/orai/orai/.oraid environment:
    ```
    sudo chmod +x disk-space-script.sh
    ```
 
-3. **Disk Space Monitoring:** Make the `check_disk_script.sh` file executable:
+3. **Permissions:** Set executable permissions for the `setup_HOME-orai.sh` file to install "oraid" in $HOME/.oraid environment:
    ```
    sudo chmod +x check_disk_script.sh
    ```
 
-4. **Crontab Configuration:** Access the crontab scheduler with:
+4. **$HOME/orai/orai/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
-   crontab -e
+   ./setup_orai-orai.sh
    ```
- 5.  Then, add the following lines on the bottom to schedule disk space checks every 6 hours:
+5. **D$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
-   # Check disk space every 6 hours
-   0 */6 * * * /$HOME/diskchecker_orai-orai-oraid/check_disk_script.sh
+   ./setup_HOME-orai.sh
    ```
-Save and exit the file. "Ctrl + x -> Y and Enter"
 
-
-**Setup Example**
-
-```
-cryptogenesis@Orai-Node:~$ cd $HOME
-cryptogenesis@Orai-Node:~$ sudo git clone https://github.com/Crypt0Genesis/diskchecker_orai-orai-oraid.git
-Cloning into 'diskchecker_orai-orai-oraid'...
-remote: Enumerating objects: 86, done.
-remote: Counting objects: 100% (86/86), done.
-remote: Compressing objects: 100% (85/85), done.
-remote: Total 86 (delta 49), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (86/86), 41.19 KiB | 3.17 MiB/s, done.
-Resolving deltas: 100% (49/49), done.
-
-cryptogenesis@Orai-Node:~$ ls
-diskchecker_orai-orai-oraid  go  orai 
-
-cryptogenesis@Orai-Node:~$ cd diskchecker_orai-orai-oraid
-
-cryptogenesis@Orai-Node:~/diskchecker_orai-orai-oraid$ ls
-LICENSE  README.md  check_disk_script.sh  disk-space-script.sh
-
-cryptogenesis@Orai-Node:~/diskchecker_orai-orai-oraid$ sudo chmod +x check_disk_script.sh
-
-cryptogenesis@Orai-Node:~/diskchecker_orai-orai-oraid$ sudo chmod +x disk-space-script.sh
-
-cryptogenesis@Orai-Node:~/diskchecker_orai-orai-oraid$ crontab -e
-no crontab for orainode - using an empty one
-
-Select an editor.  To change later, run 'select-editor'.
-  1. /bin/nano        <---- easiest
-  2. /usr/bin/vim.basic
-
-Choose 1-2 [1]: 1
-
-#m h  dom mon dow   command
-   # Check disk space every 6 hours
-   0 */6 * * * /$HOME/diskchecker_orai-orai-oraid/check_disk_script.sh
-
-Now Run the Script Manually:
-orainode@Orai-Node:~/diskchecker_orai-orai-oraid$ ./check_disk_script.sh
-Disk space is below 80%. No action required.
-```
-
-
-**If Disk Space reach at 80% or Above**
-```
-cryptogenesis@Orai-Node:~/diskchecker_orai-orai-oraid$ ./check_disk_script.sh
-Disk space is at 80%. Running script...
-Copy the priv_validator_state.json to the .oraid directory...
-File moved successfully to .oraid.
-
-Snapshot Download
-Choose download option:
-1. Download the BLOCKVAL latest snapshot
-2. Download a NYSA-NETWORK snapshot 
-Please enter the option 1 or 2
-Waiting for input... (Timeout in 1 minute)
-2
-(Visit https://snapshots.nysa.network/Oraichain/#Oraichain/)
-Please enter the latest snapshot number:
-20431522
-
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 9073M  100 9073M    0     0  25.2M      0  0:05:58  0:05:58 --:--:-- 39.3M
-Snapshot downloaded successfully.
-
-Stopping the oraid service...
-Removing old Data and Wasm folders...
-Removed old Data and Wasm folders...
-Unzipping the new Snapshot Folders...
-New Snapshot Folders unzipped successfully.
-Removing the new priv_validator_state.json and add the old one...
-Existing priv_validator_state.json file removed from data directory.
-File moved successfully to /home/cryptogenesis/orai/orai/.oraid/data/.
-Starting the oraid service...
-Deleting remaining tar.lz4 files...
-Script execution completed....
-Script Developed By Crypto-Genesis.... Happy Validating :)
-```
-
-
-```
-If your server disk is running full and you need to run the script immediately, you can execute it directly using the following command:
-
-./disk-space-script.sh
-```
 
 **Additional Information:**
 
@@ -209,11 +119,14 @@ Efforts are underway to swiftly deploy our own Orai validator dashboard, Sentry 
 2. NysaNetwork Usage (Recommended):
    The snapshot size from NysaNetwork is approximately 9GB. However, the image name varies each time.
  
-
 If you opt to use the script manually, you'll have the choice to select your preferred snapshot image. Upon manual execution, the script will present you with Option 1 and Option 2. If no option is selected, the script will wait for 1 minute before proceeding to download the default snapshot from BlockVal.
-If you run the script manually and choose Option 2 to download the Nysa snapshot, the script will prompt you to enter the latest image reference. You can obtain this reference from the Nysa Network website.
-
 
 **NOTE**
-```
+
 I've thoroughly tested the script and it operates flawlessly. However, I welcome your feedback and suggestions for further enhancements. Feel free to reach out with any concerns or improvement ideas. Thanks!
+
+```
+Crypto-Genesis Validator:
+https://t.me/crypt0genesis
+https://scan.orai.io/validators/oraivaloper1r8zzyp7ffnuzlqv5hp75yhqrxf4g9fad532p7h
+```
