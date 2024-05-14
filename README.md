@@ -3,7 +3,7 @@
 Welcome to the OraiChain Validator Node Deployment Script repository! The primary objective of this script is to facilitate seamless and error-free deployment of the OraiChain Validator node. This script offers a significant advantage by enabling almost 100% Zero Touch Provisioning (ZTP) of the validator node server.
 
 **Key Features:**
-
+```
 **Seamless Deployment:**
 The script streamlines the deployment process, ensuring a hassle-free experience.
 
@@ -13,7 +13,7 @@ With careful design and testing, the script minimizes the occurrence of errors d
 **ZTP Provisioning:** Enjoy the convenience of almost 100% Zero Touch Provisioning, reducing manual intervention.
 
 **Efficient Installation:** The approximate installation time ranges between 10 to 15 minutes, enabling swift setup of the validator node server.
-
+```
 
 **System Requirements**
 
@@ -44,7 +44,7 @@ Ensure that the systemd service is set up and enabled for proper functionality.
 **Script Functionality Overview:**
 
 The deployment script automates the setup process for deploying an OraiChain Validator node. Below is a detailed breakdown of its functionality:
-
+```
 **Set System File Limit:** 
 Adjusts the system file limit to 65535, optimizing performance for the validator node.
 
@@ -78,6 +78,7 @@ To deploy your OraiChain Validator node using this script, simply execute the de
 
 **Getting Started:**
 To get started with deploying your OraiChain Validator node using this script, follow these simple steps:
+```
 
 Installation Instructions:
 
