@@ -2,6 +2,8 @@
 
 Welcome to the OraiChain Validator Node Deployment Script repository! The primary objective of this script is to facilitate seamless and error-free deployment of the OraiChain Validator node. This script offers a significant advantage by enabling almost 100% Zero Touch Provisioning (ZTP) of the validator node server.
 
+Our principal aim is to offer deployment tools and support to the community, streamlining the process of deploying our OraiChain Network with minimal hassle.
+
 **Key Features:**
 ```
 **Seamless Deployment:**
