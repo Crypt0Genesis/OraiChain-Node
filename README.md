@@ -89,19 +89,28 @@ Installation Instructions:
    cd $HOME
    sudo git clone https://github.com/Crypt0Genesis/OraiChain-Node.git
    ```
-2. **Permissions:** Set executable permissions for the `setup_orai-orai.sh` file to install "oraid" in $HOME/orai/orai/.oraid environment:
+2. ""Go to the downloaded folder "OraiChain-Node"
    ```
-   sudo chmod +x disk-space-script.sh
+   cd OraiChain-Node
    ```
-3. **Permissions:** Set executable permissions for the `setup_HOME-orai.sh` file to install "oraid" in $HOME/.oraid environment:
+3. **Permissions:**
+   Set executable permissions for the `setup_orai-orai.sh` file to install "oraid" in $HOME/orai/orai/.oraid environment:
    ```
-   sudo chmod +x check_disk_script.sh
+   sudo chmod +x setup_orai-orai.sh
    ```
-4. **$HOME/orai/orai/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
+   Or
+   
+   Set executable permissions for the `setup_HOME-orai.sh` file to install "oraid" in $HOME/.oraid environment:
+   ```
+   sudo chmod +x setup_HOME-orai.sh
+   ```
+5. **$HOME/orai/orai/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
    ./setup_orai-orai.sh
    ```
-5. **D$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
+   Or
+   
+   **D$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
    ./setup_HOME-orai.sh
    ```
