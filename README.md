@@ -1,11 +1,14 @@
 # OraiChain Validator Node Deployment Script
 
+************************************************************************************************************************
 Welcome to the OraiChain Validator Node Deployment Script repository! The primary objective of this script is to facilitate seamless and error-free deployment of the OraiChain Validator node. This script offers a significant advantage by enabling almost 100% Zero Touch Provisioning (ZTP) of the validator node server.
 
 Our principal aim is to offer deployment tools and support to the community, streamlining the process of deploying our OraiChain Network with minimal hassle.
 
+************************************************************************************************************************
+
 **Key Features:**
-```
+
 **Seamless Deployment:**
 The script streamlines the deployment process, ensuring a hassle-free experience.
 
@@ -17,9 +20,11 @@ Enjoy the convenience of almost 100% Zero Touch Provisioning, reducing manual in
 
 **Efficient Installation:**
 The approximate installation time ranges between 10 to 15 minutes, enabling swift setup of the validator node server.
-```
+
+************************************************************************************************************************
 
 **System Requirements**
+
 
 1) Operating System: Ubuntu
 
@@ -50,7 +55,7 @@ sudo apt install git
 **Script Functionality Overview:**
 
 The deployment script automates the setup process for deploying an OraiChain Validator node. Below is a detailed breakdown of its functionality:
-```
+
 **Set System File Limit:** 
 Adjusts the system file limit to 65535, optimizing performance for the validator node.
 
@@ -84,7 +89,8 @@ To deploy your OraiChain Validator node using this script, simply execute the de
 
 **Getting Started:**
 To get started with deploying your OraiChain Validator node using this script, follow these simple steps:
-```
+
+************************************************************************************************************************
 
 Installation Instructions:
 
@@ -119,7 +125,7 @@ Installation Instructions:
    ./setup_HOME-orai.sh
    ```
 
-
+************************************************************************************************************************
 **Additional Information:**
 
 We've implemented options for downloading snapshots, allowing users to select the desired image. A special acknowledgment to NysaNetwork and Blockval for extending their snapshot services to the Orai community.
@@ -134,6 +140,8 @@ Efforts are underway to swiftly deploy our own Orai validator dashboard, Sentry 
    The snapshot size from NysaNetwork is approximately 9GB. However, the image name varies each time.
  
 If you opt to use the script manually, you'll have the choice to select your preferred snapshot image. Upon manual execution, the script will present you with Option 1 and Option 2. If no option is selected, the script will wait for 1 minute before proceeding to download the default snapshot from BlockVal.
+
+************************************************************************************************************************
 
 **NOTE**
 
