@@ -38,10 +38,14 @@ Add or replace the following line to the file:
 
 Save and exit the file. "Ctrl + x -> Y and Enter"
 ```
+3) "git" if not installed, you can install it from the following link:
+```
+sudo apt install git
+```
 
-
+************************************************************************************************************************
 **Note: Kindly be aware that the validator setup utilizes the oraid binary built from source in a non-Docker environment.**
-
+*************************************************************************************************************************
 
 **Script Functionality Overview:**
 
