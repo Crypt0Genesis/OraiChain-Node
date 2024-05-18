@@ -102,14 +102,14 @@ pink_space
 echo -e "\e[33mInstalling Go\e[0m"
 
 cd $HOME
-sudo wget https://go.dev/dl/go1.21.9.linux-amd64.tar.gz
-tar xvzf go1.21.9.linux-amd64.tar.gz
+sudo wget https://go.dev/dl/go1.21.10.linux-amd64.tar.gz
+tar xvzf go1.21.10.linux-amd64.tar.gz
 wait_and_display_message 30 "Installation in Progress..."
 
 # Step 13
 echo -e "\e[33mRemoving existing Go installation and installing the new one\e[0m"
 sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf go1.21.9.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.21.10.linux-amd64.tar.gz
 
 pink_space
 
@@ -132,7 +132,7 @@ pink_space
 
 # Step 7
 echo -e "\e[33mCleaning Up Extracted files\e[0m"
-rm go1.21.9.linux-amd64.tar.gz
+rm go1.21.10.linux-amd64.tar.gz
 echo -e "\e[32mExtracted Fles Cleaned\e[0m"
 
 pink_space
@@ -162,6 +162,7 @@ check_directory() {
 
 # Install the binary from source
 echo -e "\e[33mInstalling Oraid binary from source\e[0m"
+echo -e "\e[33mPlease visit "https://github.com/oraichain/orai" - To check the latest version\e[0m"
 
 # A
 read -p "Enter the Oraid version to checkout (e.g., v0.41.8): " version
