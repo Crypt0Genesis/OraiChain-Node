@@ -362,13 +362,14 @@ pink_space
 # Step 22
 check_directory "$HOME/.oraid" ".oraid directory is created" ".oraid directory not found, installation failed"
 
-# Function to change values in config.toml and app.toml files
+
 change_config_values() {
     sed -i 's|seeds = ""|seeds = "8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656,49165f4ef94395897d435f144964bdd14413ea28@seed.orai.synergynodes.com:26656,8b346750e75fd584645192a65c62c7ab88741791@134.209.106.91:26656,4d0f2d042405abbcac5193206642e1456fe89963@3.134.19.98:26656"|' "$1/config.toml"
     sed -i 's|pruning = "default"|pruning = "custom"|' "$1/app.toml"
     sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|' "$1/app.toml"
     sed -i 's|pruning-interval = "0"|pruning-interval = "17"|' "$1/app.toml"
     sed -i 's|minimum-gas-prices = ""|minimum-gas-prices = "0.001orai"|' "$1/app.toml"
+    sed -i 's|chain-id = ""|chain-id = "Oraichain"|' "$1/client.toml"
 }
 
 
@@ -376,6 +377,7 @@ change_config_values() {
 echo "Config and app configuration in progress..."
 check_directory "$HOME/.oraid/config/" "config.toml file found" "config.toml file not found, configuration failed"
 check_directory "$HOME/.oraid/config/" "app.toml file found" "app.toml file not found, configuration failed"
+check_directory "$HOME/.oraid/config/" "client.toml file found" "client.toml file not found, configuration failed"
 echo -e "\e[32mConfig and app configuration completed\e[0m"
 
 pink_space
