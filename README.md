@@ -1,5 +1,11 @@
 # OraiChain Validator Node Deployment Script
 
+```
+Crypto-Genesis Validator:
+Orai RPC: https://rpc-orai.cryptogenesis.xyz
+https://scan.orai.io/validators/oraivaloper1r8zzyp7ffnuzlqv5hp75yhqrxf4g9fad532p7h
+```
+
 ************************************************************************************************************************
 Welcome to the OraiChain Validator Node Deployment Script repository! The primary objective of this script is to facilitate seamless and error-free deployment of the OraiChain Validator node. This script offers a significant advantage by enabling almost 100% Zero Touch Provisioning (ZTP) of the validator node server.
 
@@ -147,8 +153,7 @@ If you opt to use the script manually, you'll have the choice to select your pre
 
 I've thoroughly tested the script and it operates flawlessly. However, I welcome your feedback and suggestions for further enhancements. Feel free to reach out with any concerns or improvement ideas. Thanks!
 
-```
+**************************
 Crypto-Genesis Validator:
 https://t.me/crypt0genesis
-https://scan.orai.io/validators/oraivaloper1r8zzyp7ffnuzlqv5hp75yhqrxf4g9fad532p7h
-```
+**************************
