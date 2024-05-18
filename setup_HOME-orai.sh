@@ -162,7 +162,7 @@ check_directory() {
 
 # Install the binary from source
 echo -e "\e[33mInstalling Oraid binary from source\e[0m"
-echo -e "\e[33mPlease visit "https://github.com/oraichain/orai" - To check the latest version\e[0m"
+echo -e "Please visit https://github.com/oraichain/orai - To check the latest version"
 
 # A
 read -p "Enter the Oraid version to checkout (e.g., v0.41.8): " version
