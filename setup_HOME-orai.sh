@@ -165,7 +165,7 @@ echo -e "\e[33mInstalling Oraid binary from source\e[0m"
 echo "Please visit https://github.com/oraichain/orai - To check the latest version"
 
 # A
-read -p "Enter the Oraid version to checkout (e.g., v0.41.8): " version
+read -p "Enter the Oraid version to checkout (e.g., v0.42.0): " version
 
 # B
 cd $HOME
