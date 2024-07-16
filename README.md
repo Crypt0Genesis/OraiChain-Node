@@ -1,6 +1,13 @@
 # OraiChain Validator Node Deployment Script
 
 ```
+  ____                  _               ____                      _     
+ / ___|_ __ _   _ _ __ | |_ ___        / ___| ___ _ __   ___  ___(_)___ 
+| |   | '__| | | | '_ \| __/ _ \ _____| |  _ / _ \ '_ \ / _ \/ __| / __|
+| |___| |  | |_| | |_) | || (_) |_____| |_| |  __/ | | |  __/\__ \ \__ \
+ \____|_|   \__, | .__/ \__\___/       \____|\___|_| |_|\___||___/_|___/
+            |___/|_|                                                   
+
 Crypto-Genesis Validator:
 Orai RPC: https://rpc-orai.cryptogenesis.xyz
 https://scan.orai.io/validators/oraivaloper1r8zzyp7ffnuzlqv5hp75yhqrxf4g9fad532p7h
