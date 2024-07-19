@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo -e "\e[33mInstalling System Updates\e[0m"
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install figlet cowsay -y
+
+figlet "Crypto-Genesis"
+
 # Step 1
 wait_and_display_message() {
     sleep $1
@@ -417,7 +423,8 @@ echo "To check logs = sudo journalctl --unit=oraid --follow"
 pink_space
 
 #echo -e "\e[34mHappy Validating\e[0m"
-light_blue_text "**HAPPY VALIDATING!**"
+#light_blue_text "**HAPPY VALIDATING!**"
+cowsay "Stay positive and HAPPY VALIDATING!"
 
 # Step 24
 echo -e "\e[31mInitiating server reboot to apply configuration changes...\e[0m"
