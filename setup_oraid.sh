@@ -393,7 +393,6 @@ pink_space
 #light_blue_text "**HAPPY VALIDATING!**"
 cowsay "Stay positive and HAPPY VALIDATING!"
 
-# Step 24
 echo -e "\e[31mInitiating server reboot to apply configuration changes...\e[0m"
 
 pink_space
