@@ -321,16 +321,12 @@ SyslogIdentifier  = oraid
 WantedBy          = multi-user.target
 EOF
 
-# Set the permissions for the oraid.service file
 sudo chmod 644 /etc/systemd/system/oraid.service
 
-# Reload systemd to read the new unit file
 sudo systemctl daemon-reload
 
-# Enable the oraid service to start on boot
 sudo systemctl enable oraid.service
 
-# Enable the oraid service to start on boot
 sudo systemctl start oraid.service
 
 echo "Oraid daemon created successfully"
@@ -341,7 +337,7 @@ wait_and_display_message 30 "Installation in Progress..."
 
 pink_space
 
-# Step 22
+
 check_directory "$HOME/.oraid" ".oraid directory is created" ".oraid directory not found, installation failed"
 
 
@@ -355,7 +351,6 @@ change_config_values() {
 }
 
 
-# Check again $HOME/.oraid/config/config.toml and app.toml files
 echo "Config and app configuration in progress..."
 check_directory "$HOME/.oraid/config/" "config.toml file found" "config.toml file not found, configuration failed"
 check_directory "$HOME/.oraid/config/" "app.toml file found" "app.toml file not found, configuration failed"
@@ -364,23 +359,19 @@ echo -e "\e[32mConfig and app configuration completed\e[0m"
 
 pink_space
 
-# Step 23
 cd $HOME
 
-# Step 6: Change the values in config.toml and app.toml files
 change_config_values "$HOME/.oraid/config"
 echo "Values changed successfully"
 
 echo "Running Oraid Service"
-# Restart the oraid service
-sudo systemctl restart oraid.service
 
+sudo systemctl restart oraid.service
 
 echo -e "\e[32mOrai validator Node Setup Completed Successfully\e[0m"
 
 pink_space
 
-# Display the message
 echo -e "\e[32m**Orai successfully installed in $HOME/.oraid**\e[0m"
 
 pink_space
