@@ -130,7 +130,7 @@ Installation Instructions:
 ************************************************************************************************************************
 **Additional Information:**
 
-We've implemented options for downloading snapshots, allowing users to select the desired image. A special acknowledgment to Polkachu and Blockval for extending their snapshot services to the Orai community.
+We've implemented options for downloading snapshots, allowing users to select the desired image. A special acknowledgment to OWALLET and Blockval for extending their snapshot services to the Orai community.
 
 Efforts are underway to swiftly deploy our own Orai validator dashboard, Sentry node, RPC, and snapshots. Once available, we'll promptly share them with our Orai community. In the interim, we'll utilize the snapshots provided by Polkachu and Blockval.
 
@@ -138,10 +138,15 @@ Efforts are underway to swiftly deploy our own Orai validator dashboard, Sentry 
    By default, Blockval's snapshot feature selects the latest available snapshot. However, please note that sometimes the snapshot size can range from 30-40GB.
    The script will automatically opt for Blockval's image, as the link directs to the latest snapshot. 
 
-2. NysaNetwork Usage (Recommended):
-   The snapshot size from NysaNetwork is approximately 16GB. However, the image name varies each time.
+2. OWALLET Usage (Recommended):
+   The snapshot size from OWALLET is approximately 16GB. However, the image name varies each time.
  
 If you opt to use the script manually, you'll have the choice to select your preferred snapshot image. Upon manual execution, the script will present you with Option 1 and Option 2. If no option is selected, the script will wait for 1 minute before proceeding to download the default snapshot from BlockVal.
+
+3. Setup Validator:
+This script sets up a full mainnet node. Once synchronization is complete, please follow the official OraiChain guide to create a validator wallet and register your validator node on the OraiChain Network.
+
+https://docs.orai.io/nodes-and-validators/networks/mainnet/become-a-validator
 
 ************************************************************************************************************************
 
