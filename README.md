@@ -117,40 +117,29 @@ Installation Instructions:
    cd OraiChain-Node
    ```
 3. **Permissions:**
-   Set executable permissions for the `setup_orai-orai.sh` file to install "oraid" in $HOME/orai/orai/.oraid environment:
+   Set executable permissions for the `setup_oraid.sh` file to install "oraid" in $HOME/.oraid environment:
    ```
-   sudo chmod +x setup_orai-orai.sh
+   sudo chmod +x setup_oraid.sh
    ```
-   Or
    
-   Set executable permissions for the `setup_HOME-orai.sh` file to install "oraid" in $HOME/.oraid environment:
+4. **$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
    ```
-   sudo chmod +x setup_HOME-orai.sh
-   ```
-5. **$HOME/orai/orai/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
-   ```
-   ./setup_orai-orai.sh
-   ```
-   Or
-   
-   **$HOME/.oraid:** To deploy your OraiChain Validator node using this script, simply execute the deployment script and follow the on-screen prompts:
-   ```
-   ./setup_HOME-orai.sh
+   ./setup_oraid.sh
    ```
 
 ************************************************************************************************************************
 **Additional Information:**
 
-We've implemented options for downloading snapshots, allowing users to select the desired image. A special acknowledgment to NysaNetwork and Blockval for extending their snapshot services to the Orai community.
+We've implemented options for downloading snapshots, allowing users to select the desired image. A special acknowledgment to Polkachu and Blockval for extending their snapshot services to the Orai community.
 
-Efforts are underway to swiftly deploy our own Orai validator dashboard, Sentry node, RPC, and snapshots. Once available, we'll promptly share them with our Orai community. In the interim, we'll utilize the snapshots provided by NysaNetworks and Blockval.
+Efforts are underway to swiftly deploy our own Orai validator dashboard, Sentry node, RPC, and snapshots. Once available, we'll promptly share them with our Orai community. In the interim, we'll utilize the snapshots provided by Polkachu and Blockval.
 
 1. BlockVal Usage:
-   By default, Blockval's snapshot feature selects the latest available snapshot. However, please note that sometimes the snapshot size can range from 40-50GB.
+   By default, Blockval's snapshot feature selects the latest available snapshot. However, please note that sometimes the snapshot size can range from 30-40GB.
    The script will automatically opt for Blockval's image, as the link directs to the latest snapshot. 
 
 2. NysaNetwork Usage (Recommended):
-   The snapshot size from NysaNetwork is approximately 9GB. However, the image name varies each time.
+   The snapshot size from NysaNetwork is approximately 16GB. However, the image name varies each time.
  
 If you opt to use the script manually, you'll have the choice to select your preferred snapshot image. Upon manual execution, the script will present you with Option 1 and Option 2. If no option is selected, the script will wait for 1 minute before proceeding to download the default snapshot from BlockVal.
 
