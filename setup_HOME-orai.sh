@@ -206,22 +206,19 @@ fi
 
 pink_space
 
-# Download the new JSON file
 wget -P "$CONFIG_DIR" https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json
 
 echo -e "\e[32mNew genesis.json file downloaded\e[0m"
 
 pink_space
 
-wget -P "$CONFIG_DIR" https://snapshots.nysa.network/Oraichain/addrbook.json
+wget -P "$CONFIG_DIR" https://snapshots.polkachu.com/addrbook/orai/addrbook.json --inet4-only
 
 echo -e "\e[32mNew addrbook.json file downloaded\e[0m"
 
 pink_space
 
-# Step 17
 
-# Snapshot Download
 echo -e "\e[33mStarting Snapshot Download\e[0m"
 
 # Download the latest snapshot
@@ -231,26 +228,24 @@ download_latest_snapshot() {
     curl -L https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4 -o "$HOME/oraichain_latest.tar.lz4"
 }
 
-# Step 18
 download_specific_snapshot() {
-    echo "Visit https://snapshots.nysa.network/Oraichain/#Oraichain/"
+    echo "Visit https://snapshot.owallet.io/"
     echo "Please enter the snapshot number:"
     read snapshot_number
-    # Replace "xxxx" in the URL with the provided snapshot number
-    url="https://snapshots.nysa.network/Oraichain/Oraichain_${snapshot_number}.tar.lz4"
-    curl -L "$url" -o "$HOME/Oraichain_${snapshot_number}.tar.lz4"
+    url="https://snapshot.owallet.io/files/oraichain_${snapshot_number}.tar.lz4"
+    curl -L "$url" -o "$HOME/oraichain_${snapshot_number}.tar.lz4"
 }
 
-# Step 19
+
 echo -e "\e[33mChoose download option:\e[0m"
 echo "1. Download the BLOCKVAL latest snapshot"
-echo "2. Download a NYSA-NETWORK snapshot  (Recommended - Minimum Disk Space)"
+echo "2. Download a OWALLET snapshot  (Minimum Disk Space)"
 pink_space
 echo "Please enter the option 1 or 2"
 echo "Waiting for input... (Timeout in 1 minute)"
 
 if read -t 60 option; then
-    # Perform the selected action
+    
     case $option in
         1)
             download_latest_snapshot
@@ -268,28 +263,24 @@ else
     download_latest_snapshot
 fi
 
-# Wait until the snapshot is downloaded
-while [ ! -f "$HOME/oraichain_latest.tar.lz4" ] && [ ! -f "$HOME/Oraichain_${snapshot_number}.tar.lz4" ]; do
+while [ ! -f "$HOME/oraichain_latest.tar.lz4" ] && [ ! -f "$HOME/oraichain_${snapshot_number}.tar.lz4" ]; do
     sleep 1
 done
 
 echo -e "\e[32mSnapshot downloaded successfully\e[0m"
 
-# Unzip the folders
 echo "Unzipping the new Snapshot Folders..."
 for file in $HOME/*.tar.lz4; do
         tar -I lz4 -xf "$file" -C $HOME/.oraid
         rm "$file"
 done
 
-# Wait until all folders are unzipped
 while [ -n "$(find $HOME -maxdepth 1 -name '*.tar.lz4')" ]; do
         sleep 1
 done
 
 echo -e "\e[32mNew Snapshot Folders unzipped successfully\e[0m"
 
-# Step 20
 
 cd $HOME
 
@@ -299,13 +290,13 @@ wait_and_display_message 30 "Installation in Progress..."
 
 pink_space
 
-# Step 21
+
 cd $HOME
 wait_and_display_message 30 "Creating Oraid Directory..."
 
 pink_space
 
-# Create systemd file for Oraid
+
 echo -e "\e[33mCreating systemd daemon for Oraid\e[0m"
 
 
@@ -355,7 +346,7 @@ check_directory "$HOME/.oraid" ".oraid directory is created" ".oraid directory n
 
 
 change_config_values() {
-    sed -i 's|seeds = ""|seeds = "8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656,49165f4ef94395897d435f144964bdd14413ea28@seed.orai.synergynodes.com:26656,8b346750e75fd584645192a65c62c7ab88741791@134.209.106.91:26656,4d0f2d042405abbcac5193206642e1456fe89963@3.134.19.98:26656"|' "$1/config.toml"
+    sed -i 's|seeds = ""|seeds = "8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:23356,8b346750e75fd584645192a65c62c7ab88741791@134.209.106.91:26656,4d0f2d042405abbcac5193206642e1456fe89963@3.134.19.98:26656"|' "$1/config.toml"
     sed -i 's|pruning = "default"|pruning = "custom"|' "$1/app.toml"
     sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|' "$1/app.toml"
     sed -i 's|pruning-interval = "0"|pruning-interval = "20"|' "$1/app.toml"
